@@ -1,7 +1,7 @@
 #include<stdio.h>
 int input_side(){
     int a;
-    printf("Enter the length of side 1\n");
+    printf("Enter the length of side \n");
     scanf("%d",&a);
     return a;
 }
