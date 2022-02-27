@@ -1,1 +1,62 @@
-
+Breakpoint 1, main () at p5original.c:28
+28      a=input();
+(gdb) s
+input () at p5original.c:2
+2   int input(){
+(gdb) n
+4       printf("Enter number to find gcd \n");
+(gdb) n
+Enter number to find gcd 
+5       scanf("%d",&n);
+(gdb) n
+5
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p5original.c:29
+29      b=input();
+(gdb) s
+input () at p5original.c:2
+2   int input(){
+(gdb) n
+4       printf("Enter number to find gcd \n");
+(gdb) n
+Enter number to find gcd 
+5       scanf("%d",&n);
+(gdb) n
+5
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p5original.c:30
+30      hcf=gcd(a,b);
+(gdb) s
+gcd (a=5, b=5) at p5original.c:10
+10      if (a>b){
+(gdb) n
+14          hcf=a;
+(gdb) n
+16      for(hcf;hcf>=1;hcf--){
+(gdb) n
+17          if(a%hcf==0 && b%hcf==0){
+(gdb) n
+18              break;
+(gdb) n
+21      return hcf;
+(gdb) n
+22  }
+(gdb) n
+main () at p5original.c:31
+31      output(a,b,hcf);
+(gdb) s
+output (a=5, b=5, hcf=5) at p5original.c:24
+24      printf("The hcf of %d and %d is %d",a,b,hcf);
+(gdb) n
+25  }
+(gdb) n
+main () at p5original.c:32
+32      return 0;
+(gdb) n
+33  }
