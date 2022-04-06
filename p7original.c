@@ -11,7 +11,7 @@ Triangle input_triangle(){
     scanf("%f",&t.altitude);
     return t;
 }
-float  find_area(Triangle *t){
+float find_area(Triangle *t){
     float area;
     area=0.5* t->base * t->altitude;
     return area;
@@ -19,12 +19,11 @@ float  find_area(Triangle *t){
 void output(Triangle t,float area){
     printf("The area of triangle with %.2f base  and %.2f altitude is %.2f",t.base,t.altitude,area);
 }
-int main(){
+int main() {
     Triangle t;
     t=input_triangle();
     float area;
     area=find_area(&t);
     output(t,area);
     return 0;
-
 }

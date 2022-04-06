@@ -3,32 +3,24 @@ void input_string(char a[]){
     printf("Enter a word to be reversed\n");
     scanf("%s",a);
 }
-int string_length()
-{
-  int len;
-  while(a[len]!='\0'){
-      len++;
-  }
-  return len;
-}
-char *srt_reverse(char *a){
-  char temp;
+void srt_reverse(char a[],char temp[]){
   int len=0;
-  
-  for (int i=0;i<(len-1)/2;i++){
-      temp=a[i];
-      a[i]=a[len-1-i];
-      a[len-1-i]=temp;
+ for(int i=0;a[i]!='\0';i++){
+     len+=1;
+ }
+ int j=len-1;
+  for (int i=0;a[i]!='\0';i++,j--){
+     temp[i]=a[j];
   }
-  return a;
+ 
 }
-void output(char b[]){
-    printf("The new string is %s",b);
+void output(char temp[]){
+    printf("The new string is %s",temp);
 }
 int main(){
-    char a[100];
+    char a[100],temp[100];
     input_string(a);
-    srt_reverse(a);
-    output(a);
+    srt_reverse(a,temp);
+    output(temp);
     return 0;
 }

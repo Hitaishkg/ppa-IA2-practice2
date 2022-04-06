@@ -1,7 +1,7 @@
 #include<stdio.h>
 typedef struct triangle{
     float base,altitude,area;
-}Triangle;
+}Triangle; 
 int input_n(){
     int n;
     printf("Enter the number of triangles to be compared\n");
@@ -21,14 +21,12 @@ void input_n_triangles(int n,Triangle t[n]){
         t[i]=input_triangle();
     }
 }
-Triangle find_area(Triangle *t){
-    Triangle smallest;
-    smallest.area=(t->base * t->altitude) * 0.5;
-    return smallest;
+void find_area(Triangle *t){
+   t->area=0.5*t->base*t->altitude;
 }
 void find_area_n(int n,Triangle t[n]){
     for(int i=0;i<n;i++){
-        t[i].area=find_area(&t[i]);
+        find_area(&t[i]);
     }
 }
 Triangle find_smallest_triangle(int n,Triangle t[n]){
@@ -54,4 +52,4 @@ int main(){
     output(n,t,smallest);
     return 0;
 
-}
+} 
